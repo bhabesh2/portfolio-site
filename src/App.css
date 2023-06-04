@@ -35,3 +35,25 @@
 .navbar-nav li a:hover {
   border-top: solid var(--primary-small-font) var(--primary-grren);
 }
+/* =============home========= */
+
+.home-wraper{
+  position:relative;
+  background: url(../src/Components/programming-g129a6042f_1280.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-white);
+}
+
+.info h1{
+  text-transform: uppercase;
+}
