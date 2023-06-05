@@ -13,18 +13,64 @@
   --primary-font-50px: 3.125rem;
   --primary-font-10px: 0.625rem;
   --primary-font-20px: 1.25rem;
+  --primary-font-30px: 2.188rem;
   --primary-small-font: 0.125rem;
 }
 
 /* =============navbar========= */
 /* this is for logo */
-.navbar .navbar-brand {
-  color: var(--primary-white) !important;
+.navbar{
+  z-index: 10;
 }
+
+.navlogo {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  color: var(--primary-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* =============moon style on the logo=========== */
+
+.rotate{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background-color: var(--primary-yellow);
+  animation: circle 5s linear infinite;
+}
+
+
+@keyframes circle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(24px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(24px) rotate(-360deg);
+  }
+}
+
+.logoText{
+  margin-top: 50%;
+  margin-bottom: 50%;
+  font-weight: bold;
+}
+
+
 /* nav links */
 .navbar-nav .nav-link {
   color: var(--primary-white) !important;
   margin-left: var(--primary-font-20px);
+  font-weight: 600;
 }
 
 .navbar-nav li a.active,
@@ -39,21 +85,63 @@
 
 .home-wraper{
   position:relative;
-  background: url(../src/Components/programming-g129a6042f_1280.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/Components/programming-g129a6042f_1280.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
+ margin-top: 45px;
 }
-
 .info{
   display: flex;
+  position: absolute;
+  top: 0;
+  left: var(--primary-font-50px);
+  bottom: 0;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  text-align: left;
   color: var(--primary-white);
+  gap: 20px;
 }
 
 .info h1{
   text-transform: uppercase;
+}
+
+.info p{
+  width: 40%;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.name{
+  font-weight: 800;
+}
+
+/* =============type text========= */
+
+.type-text{
+  color: white;
+  font-size: var(--primary-font-30px) ;
+  font-weight: 900;
+}
+
+/* =============About========= */
+
+
+
+/* =============Phone========= */
+
+@media screen and (max-width: 786px) {
+  .info{
+    align-items: center;
+    left: 0;
+    right: 0;
+  }
+  .info p{
+    width: 100%;
+  }
+  .type-text{
+    font-weight: 700;
+  }
 }
