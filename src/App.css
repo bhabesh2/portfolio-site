@@ -17,9 +17,10 @@
   --primary-small-font: 0.125rem;
 }
 
+
 /* =============navbar========= */
 /* this is for logo */
-.navbar{
+.navbar {
   z-index: 10;
 }
 
@@ -37,7 +38,7 @@
 
 /* =============moon style on the logo=========== */
 
-.rotate{
+.rotate {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -49,22 +50,21 @@
   animation: circle 5s linear infinite;
 }
 
-
 @keyframes circle {
   0% {
     transform: translate(-50%, -50%) rotate(0deg) translateX(24px) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(24px) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(24px)
+      rotate(-360deg);
   }
 }
 
-.logoText{
+.logoText {
   margin-top: 50%;
   margin-bottom: 50%;
   font-weight: bold;
 }
-
 
 /* nav links */
 .navbar-nav .nav-link {
@@ -83,15 +83,19 @@
 }
 /* =============home========= */
 
-.home-wraper{
-  position:relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/Components/programming-g129a6042f_1280.jpg) no-repeat;
+.home-wraper {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../src/Components/programming-g129a6042f_1280.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
- margin-top: 45px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.info{
+.info {
   display: flex;
   position: absolute;
   top: 0;
@@ -104,44 +108,155 @@
   gap: 20px;
 }
 
-.info h1{
+.info h1 {
   text-transform: uppercase;
 }
 
-.info p{
+.info p {
   width: 40%;
   text-align: justify;
   font-size: 18px;
 }
 
-.name{
+.name {
   font-weight: 800;
+}
+
+.right-home{
+  margin-left: 50%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-home img{
+  width: 60%;
+  border-radius: 50%;
+}
+
+.mobile-bttn{
+  display: none;
 }
 
 /* =============type text========= */
 
-.type-text{
+.type-text {
   color: white;
-  font-size: var(--primary-font-30px) ;
+  font-size: var(--primary-font-30px);
   font-weight: 900;
 }
 
 /* =============About========= */
 
+.section-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  gap: 15%;
+  margin-top: 5%;
+}
+
+.left-side{
+  z-index: 20;
+  width: 50%;
+  box-shadow: rgb(10, 236, 225) 0px 7px 29px 0px;
+  border-radius: 20px;
+
+}
+
+.left-side img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.title-text{
+  padding-top: 40px;
+  width: 20%;
+  margin: auto; 
+}
+
+.title-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  border-bottom: 2px solid white;
+}
+
+.right-side {
+  box-shadow: rgb(10, 236, 225) 0px 7px 29px 0px;
+  z-index: 20;
+  background-color: var(--primary-dark);
+  padding: 30px;
+  border-radius: 20px;
+  width: 50%;
+  position: relative;
+  transition:  3s ease-in-out;
+
+}
+
+.front-face,
+.back-face {
+  color: white;
+}
+
+.flipped .front-face {
+  display: none;
+}
+
+.flipped .back-face {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn button {
+  padding: 2vh 2vw;
+  border-radius: 20px;
+  border: none;
+}
 
 
 /* =============Phone========= */
 
 @media screen and (max-width: 786px) {
-  .info{
+  .info {
     align-items: center;
     left: 0;
     right: 0;
   }
-  .info p{
+  .info p {
     width: 100%;
   }
-  .type-text{
+  .type-text {
     font-weight: 700;
   }
+  .section-box{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .right-side{
+    width: 100%;
+  }
+  .front-face, .back-face{
+    width: 100%;
+  }
+  .home-wraper{
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-home{
+   display: none;
+  }
+  .mobile-bttn{
+    display: block;
+  }
+  
 }
