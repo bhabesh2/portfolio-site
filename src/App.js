@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import ParticlesBackground from './Components/ParticlesBackground';
 import About from './Components/About';
+import Skill from './Components/Skill';
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
      <Home/>
     <ParticlesBackground/>
     <About/>
+    <Skill/>
     </>
   );
 }
